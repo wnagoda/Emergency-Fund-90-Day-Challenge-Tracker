@@ -449,4 +449,474 @@
         <div class="tabs">
             <button class="tab active" onclick="showSection('weekly')">📅 Weekly Plan</button>
             <button class="tab" onclick="showSection('income')">💰 Income Boosts</button>
-            <button class="tab" onclick="showSection('tracker')">📊 Daily
+            <button class="tab" onclick="showSection('tracker')">📊 Daily Tracker</button>
+            <button class="tab" onclick="showSection('milestones')">🎯 Milestones</button>
+        </div>
+        
+        <div class="content">
+            <!-- WEEKLY PLAN SECTION -->
+            <div id="weekly" class="section active">
+                <h2 style="text-align: center; margin-bottom: 30px;">📅 Your 90-Day Weekly Action Plan</h2>
+                
+                <div class="week-grid">
+                    <!-- Week 1-2: Find Hidden Money -->
+                    <div class="week-card" id="week1">
+                        <div class="week-number">1-2</div>
+                        <div class="week-title">Find Hidden Money</div>
+                        <div class="week-goal">Goal: Find £200 in money leaks</div>
+                        <ul class="task-list">
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Complete subscription audit</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Review bank statements (3 months)</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Cancel unused subscriptions</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Switch energy provider</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Check for forgotten direct debits</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Negotiate phone/internet bills</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Week 3-4: Sell & Declutter -->
+                    <div class="week-card" id="week3">
+                        <div class="week-number">3-4</div>
+                        <div class="week-title">Sell & Declutter</div>
+                        <div class="week-goal">Goal: Raise £150 from items you own</div>
+                        <ul class="task-list">
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> List items on Facebook Marketplace</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Sell clothes on Vinted/Depop</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Electronics on eBay/CeX</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Books to Ziffit/Amazon</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> DVDs/Games to musicMagpie</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Car boot sale weekend</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Week 5-8: Income Boost -->
+                    <div class="week-card" id="week5">
+                        <div class="week-number">5-8</div>
+                        <div class="week-title">Income Boost Phase</div>
+                        <div class="week-goal">Goal: Generate £300 extra income</div>
+                        <ul class="task-list">
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Start food delivery driving</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Freelance your skills online</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Take on extra shifts at work</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Pet sitting/dog walking</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Online tutoring/teaching</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Rent out parking space</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Week 9-12: Optimization -->
+                    <div class="week-card" id="week9">
+                        <div class="week-number">9-12</div>
+                        <div class="week-title">Final Push & Optimize</div>
+                        <div class="week-goal">Goal: Reach £1,000 + set up maintenance</div>
+                        <ul class="task-list">
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Open high-yield savings account</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Set up automatic transfers</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Final push on income streams</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Review and consolidate gains</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Celebrate reaching £1,000!</li>
+                            <li><input type="checkbox" onchange="updateWeekProgress()"> Plan for next £1,000</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>💡 Weekly Success Tips</h4>
+                    <p><strong>Week 1-2:</strong> Low-hanging fruit - focus on the easiest money to find</p>
+                    <p><strong>Week 3-4:</strong> Be ruthless with selling - if you haven't used it in 12 months, sell it</p>
+                    <p><strong>Week 5-8:</strong> Choose 1-2 income streams and focus on them consistently</p>
+                    <p><strong>Week 9-12:</strong> Don't stop at £1,000 - momentum is your friend!</p>
+                </div>
+            </div>
+            
+            <!-- INCOME SECTION -->
+            <div id="income" class="section">
+                <h2 style="text-align: center; margin-bottom: 30px;">💰 Quick Income Boost Ideas</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">
+                    Realistic ways to earn £20-100+ this week
+                </p>
+                
+                <div class="income-idea">
+                    <h4>🚗 Food Delivery Driving</h4>
+                    <p>Deliveroo, Uber Eats, Just Eat during evenings/weekends</p>
+                    <div class="potential">£8-12/hour</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>📱 Sell Unused Items</h4>
+                    <p>Facebook Marketplace, Vinted, eBay, CeX for electronics</p>
+                    <div class="potential">£50-200 one-time</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>🐕 Pet Services</h4>
+                    <p>Rover.com, local dog walking, pet sitting while owners travel</p>
+                    <div class="potential">£15-25/visit</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>🧹 Cleaning Services</h4>
+                    <p>Offer cleaning to neighbors, busy professionals, elderly</p>
+                    <div class="potential">£12-20/hour</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>💻 Freelance Skills</h4>
+                    <p>Fiverr, Upwork - writing, design, admin, data entry</p>
+                    <div class="potential">£10-50/project</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>📚 Online Tutoring</h4>
+                    <p>Tutor.com, MyTutor - help with subjects you know well</p>
+                    <div class="potential">£15-30/hour</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>🏠 Rent Your Space</h4>
+                    <p>Airbnb spare room, rent parking space, storage space</p>
+                    <div class="potential">£20-80/night</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>📋 Market Research</h4>
+                    <p>Paid surveys, focus groups, product testing</p>
+                    <div class="potential">£5-50/study</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>🎭 Event Staff</h4>
+                    <p>Weekend events, festivals, conferences, wedding help</p>
+                    <div class="potential">£10-15/hour</div>
+                </div>
+                
+                <div class="income-idea">
+                    <h4>📦 Package Delivery</h4>
+                    <p>Amazon Flex, DPD, Hermes local delivery</p>
+                    <div class="potential">£13-17/hour</div>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>🎯 Income Boost Strategy</h4>
+                    <p><strong>Pick 2-3 methods max</strong> - spreading too thin reduces earnings</p>
+                    <p><strong>Start immediately</strong> - the sooner you start, the sooner money arrives</p>
+                    <p><strong>Track everything</strong> - know exactly how much each method earns you</p>
+                    <p><strong>Reinvest time</strong> - spend earnings on tools to earn more (better equipment, etc.)</p>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>⚠️ Quick Income Reality Check</h4>
+                    <p><strong>Tax implications:</strong> Keep records of additional earnings</p>
+                    <p><strong>Time investment:</strong> Factor in travel time, setup time</p>
+                    <p><strong>Sustainability:</strong> Don't burn out - this is temporary boost</p>
+                    <p><strong>Safety first:</strong> Meet buyers in public places, trust your instincts</p>
+                </div>
+            </div>
+            
+            <!-- DAILY TRACKER SECTION -->
+            <div id="tracker" class="section">
+                <h2 style="text-align: center; margin-bottom: 30px;">📊 Daily Progress Tracker</h2>
+                
+                <div class="savings-tracker">
+                    <h3 style="color: #e17055; margin-bottom: 20px;">💷 Log Your Savings</h3>
+                    
+                    <div class="savings-input">
+                        <label>Money found today:</label>
+                        <span>£</span>
+                        <input type="number" id="dailySaving" placeholder="0" min="0">
+                        <button class="add-btn" onclick="addDailySaving()">Add to Fund</button>
+                    </div>
+                    
+                    <div class="savings-input">
+                        <label>Source:</label>
+                        <select id="savingsSource" style="padding: 10px; border: 2px solid #ddd; border-radius: 8px;">
+                            <option value="subscription">Cancelled subscription</option>
+                            <option value="sale">Sold item</option>
+                            <option value="income">Extra income</option>
+                            <option value="refund">Refund/cashback</option>
+                            <option value="found">Found money</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <h3 style="color: #e17055; margin: 30px 0 20px 0;">📅 90-Day Calendar</h3>
+                <p style="color: #666; margin-bottom: 20px;">Click days when you added money to your emergency fund</p>
+                
+                <div class="daily-tracker">
+                    <div class="day-header">Sun</div>
+                    <div class="day-header">Mon</div>
+                    <div class="day-header">Tue</div>
+                    <div class="day-header">Wed</div>
+                    <div class="day-header">Thu</div>
+                    <div class="day-header">Fri</div>
+                    <div class="day-header">Sat</div>
+                    
+                    <!-- Generate 90 day boxes -->
+                    <script>
+                        for(let i = 1; i <= 90; i++) {
+                            document.write(`<div class="day-box" onclick="toggleDay(this)" data-day="${i}">${i}</div>`);
+                        }
+                    </script>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>📈 Daily Habits for Success</h4>
+                    <p><strong>Morning:</strong> Check for overnight sales, cashback, refunds</p>
+                    <p><strong>Lunch:</strong> Quick scan for items to sell</p>
+                    <p><strong>Evening:</strong> Log any money found/earned today</p>
+                    <p><strong>Weekly:</strong> Review progress and adjust strategy</p>
+                </div>
+                
+                <div class="savings-tracker">
+                    <h3 style="color: #e17055; margin-bottom: 20px;">📋 Savings Log</h3>
+                    <div id="savingsLog">
+                        <p style="color: #666; font-style: italic;">Your daily savings will appear here...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MILESTONES SECTION -->
+            <div id="milestones" class="section">
+                <h2 style="text-align: center; margin-bottom: 30px;">🎯 Achievement Milestones</h2>
+                
+                <div class="milestone" id="milestone100">
+                    <h4>First £100 🎉</h4>
+                    <div class="milestone-amount">£100</div>
+                    <p>You've proven the system works! Keep going!</p>
+                </div>
+                
+                <div class="milestone" id="milestone250">
+                    <h4>Quarter Way There 🚀</h4>
+                    <div class="milestone-amount">£250</div>
+                    <p>Momentum building - you're on fire!</p>
+                </div>
+                
+                <div class="milestone" id="milestone500">
+                    <h4>Halfway Point 💪</h4>
+                    <div class="milestone-amount">£500</div>
+                    <p>The hardest part is behind you!</p>
+                </div>
+                
+                <div class="milestone" id="milestone750">
+                    <h4>Nearly There! ⚡</h4>
+                    <div class="milestone-amount">£750</div>
+                    <p>You can taste victory - final push!</p>
+                </div>
+                
+                <div class="milestone" id="milestone1000">
+                    <h4>GOAL ACHIEVED! 🏆</h4>
+                    <div class="milestone-amount">£1,000</div>
+                    <p>You did it! You have a real emergency fund!</p>
+                </div>
+                
+                <div class="celebration" id="celebration">
+                    <h3>🎉 CONGRATULATIONS! 🎉</h3>
+                    <p>You've built a £1,000 emergency fund in 90 days!</p>
+                    <p>You now have financial security that 40% of UK adults don't have.</p>
+                    <p><strong>What's next? Build it to £2,500 for even more security!</strong></p>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>🎁 Milestone Rewards</h4>
+                    <p><strong>£100:</strong> Treat yourself to a nice coffee ☕</p>
+                    <p><strong>£250:</strong> Buy something small you've wanted 🛍️</p>
+                    <p><strong>£500:</strong> Nice dinner out with friends 🍽️</p>
+                    <p><strong>£750:</strong> Buy something for your hobby 🎨</p>
+                    <p><strong>£1000:</strong> Plan a weekend away! ✈️ (but don't spend the emergency fund!)</p>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>⚠️ Emergency Fund Rules</h4>
+                    <p><strong>What counts as emergency:</strong> Job loss, medical bills, car breakdown, boiler failure</p>
+                    <p><strong>What doesn't count:</strong> Holidays, new clothes, Christmas presents, "good deals"</p>
+                    <p><strong>Replenish rule:</strong> If you use it, rebuild it immediately</p>
+                    <p><strong>Growth rule:</strong> Keep in high-yield savings, not under mattress</p>
+                </div>
+                
+                <div class="savings-tracker">
+                    <h3 style="color: #e17055; margin-bottom: 20px;">🏆 Your Achievement Stats</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+                        <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                            <div style="font-size: 2em; font-weight: bold; color: #e17055;" id="daysActive">0</div>
+                            <div>Days Active</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                            <div style="font-size: 2em; font-weight: bold; color: #00b894;" id="avgDaily">£0</div>
+                            <div>Avg Per Day</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                            <div style="font-size: 2em; font-weight: bold; color: #6c5ce7;" id="streak">0</div>
+                            <div>Current Streak</div>
+                        </div>
+                        <div style="text-align: center; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                            <div style="font-size: 2em; font-weight: bold; color: #fdcb6e;" id="milestoneCount">0</div>
+                            <div>Milestones Hit</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let totalSaved = 0;
+        let dailySavings = [];
+        let activeDays = 0;
+        
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected section
+            document.getElementById(sectionName).classList.add('active');
+            
+            // Add active to clicked tab
+            event.target.classList.add('active');
+        }
+        
+        function updateProgress() {
+            const target = parseFloat(document.getElementById('targetAmount').value) || 1000;
+            const current = totalSaved;
+            const percentage = Math.min((current / target) * 100, 100);
+            
+            // Update displays
+            document.getElementById('currentSaved').textContent = current.toLocaleString();
+            document.getElementById('progressPercentage').textContent = Math.round(percentage) + '%';
+            
+            // Update progress circle
+            const circumference = 2 * Math.PI * 90;
+            const offset = circumference - (percentage / 100) * circumference;
+            document.getElementById('progressCircle').style.strokeDashoffset = offset;
+            
+            // Check milestones
+            checkMilestones(current);
+            
+            // Update stats
+            updateStats();
+        }
+        
+        function addDailySaving() {
+            const amount = parseFloat(document.getElementById('dailySaving').value);
+            const source = document.getElementById('savingsSource').value;
+            
+            if (amount > 0) {
+                totalSaved += amount;
+                dailySavings.push({
+                    amount: amount,
+                    source: source,
+                    date: new Date().toLocaleDateString()
+                });
+                
+                // Update log
+                updateSavingsLog();
+                
+                // Reset input
+                document.getElementById('dailySaving').value = '';
+                
+                // Update progress
+                updateProgress();
+            }
+        }
+        
+        function updateSavingsLog() {
+            const log = document.getElementById('savingsLog');
+            const recentEntries = dailySavings.slice(-10).reverse();
+            
+            if (recentEntries.length === 0) {
+                log.innerHTML = '<p style="color: #666; font-style: italic;">Your daily savings will appear here...</p>';
+                return;
+            }
+            
+            log.innerHTML = recentEntries.map(entry => 
+                `<div style="display: flex; justify-content: space-between; align-items: center; padding: 10px; background: #f8f9fa; border-radius: 8px; margin: 5px 0;">
+                    <span>${entry.date} - ${entry.source}</span>
+                    <strong style="color: #00b894;">+£${entry.amount}</strong>
+                </div>`
+            ).join('');
+        }
+        
+        function checkMilestones(amount) {
+            const milestones = [
+                {amount: 100, id: 'milestone100'},
+                {amount: 250, id: 'milestone250'},
+                {amount: 500, id: 'milestone500'},
+                {amount: 750, id: 'milestone750'},
+                {amount: 1000, id: 'milestone1000'}
+            ];
+            
+            let milestoneCount = 0;
+            
+            milestones.forEach(milestone => {
+                const element = document.getElementById(milestone.id);
+                if (amount >= milestone.amount) {
+                    element.classList.add('achieved');
+                    milestoneCount++;
+                    
+                    if (milestone.amount === 1000 && !document.getElementById('celebration').classList.contains('show')) {
+                        document.getElementById('celebration').classList.add('show');
+                    }
+                } else {
+                    element.classList.remove('achieved');
+                }
+            });
+            
+            document.getElementById('milestoneCount').textContent = milestoneCount;
+        }
+        
+        function toggleDay(element) {
+            element.classList.toggle('completed');
+            updateStats();
+        }
+        
+        function updateWeekProgress() {
+            // Check each week's completion
+            const weeks = ['week1', 'week3', 'week5', 'week9'];
+            
+            weeks.forEach(weekId => {
+                const weekCard = document.getElementById(weekId);
+                const checkboxes = weekCard.querySelectorAll('input[type="checkbox"]');
+                const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+                
+                if (completed === checkboxes.length) {
+                    weekCard.classList.add('completed');
+                } else {
+                    weekCard.classList.remove('completed');
+                }
+            });
+        }
+        
+        function updateStats() {
+            const completedDays = document.querySelectorAll('.day-box.completed').length;
+            const avgDaily = totalSaved / Math.max(completedDays, 1);
+            
+            document.getElementById('daysActive').textContent = completedDays;
+            document.getElementById('avgDaily').textContent = '£' + avgDaily.toFixed(0);
+            
+            // Calculate current streak
+            const dayBoxes = document.querySelectorAll('.day-box');
+            let streak = 0;
+            for (let i = dayBoxes.length - 1; i >= 0; i--) {
+                if (dayBoxes[i].classList.contains('completed')) {
+                    streak++;
+                } else {
+                    break;
+                }
+            }
+            document.getElementById('streak').textContent = streak;
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgress();
+        });
+    </script>
+</body>
+</html>
